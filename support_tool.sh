@@ -12,3 +12,20 @@ echo "1) Systeminformationen anzeigen"
 echo "2) Speicherplatz prüfen"
 echo "3) Programm beenden"
 read -p "Ihre Auswahl:" auswahl
+
+case $auswahl in
+  1)
+    echo "Systeminformationen:"
+    uname -a
+    ;;
+  2)
+    echo "Speicherplatz:"
+    df -h
+    ;;
+  3)
+    echo "Programm wird beendet."
+    ;;
+  *)
+    echo "Ungültige Auswahl."
+    ;;
+esac
